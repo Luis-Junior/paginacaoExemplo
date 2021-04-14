@@ -1,0 +1,38 @@
+<div class="paginacao">
+
+    <div class="table">
+    
+        <table>
+            <th>ID</th>
+            <th>Data/Horario</th>
+            <th>Produto</th>
+            <th>Valor</th>
+            <th id="status">Tipo<i class="fas fa-chevron-down"></i></th>
+            <th id="status">Pagto<i class="fas fa-chevron-down"></i></th>
+            <th id="status">Status<i class="fas fa-chevron-down"></i></th>
+    
+            <tr *ngFor="let pedido of pedidos | paginate: { itemsPerPage: 5, currentPage: paginaAtual }; let i = index">
+                <td id="id">{{pedido.id}}</td>
+                <td id="data">{{pedido.data | date: "dd/MM/yyyy, HH:mm"}}h</td>
+                <td id="doc">{{pedido.produto}}</td>
+                <td id="valor" >{{pedido.valor | currency:'BRL':'R$' :'1.2-2'}}</td>
+                <td id="tipo">{{pedido.tipo}}</td>
+                <td id="pagamento">
+                    <i *ngIf="pedido.pagto === 'cartao'" class="far fa-credit-card"></i>
+                    <i *ngIf="pedido.pagto === 'boleto'" class="fas fa-barcode"></i>
+                    <i *ngIf="pedido.pagto === 'credito'" class="far fa-money-bill-alt"></i>
+                </td>
+                <td id="status" [ngClass]="{'green' : pedido.status == 'Concluído',
+                            'orange' : pedido.status == 'Em análise',
+                            'red' : pedido.status == 'Cancelado'}">
+                    <i class="fas fa-circle"></i>
+                    {{pedido.status}}
+                </td>
+            </tr>
+    
+    
+        </table>
+    </div>
+
+</div>
+<pagination-controls class="my-pagination" (pageChange)="paginaAtual = $event" previousLabel=" " nextLabel=""></pagination-controls>

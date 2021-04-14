@@ -1,0 +1,130 @@
+.paginacao{
+    padding: 15px 150px 50px 150px;
+}
+
+.table {
+    table {
+      border-collapse: separate;
+      border-spacing: 0px 7px;
+      width: 100%;
+      text-align: center;
+  
+      th {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 13px;
+        color: #9A8FA8;
+        padding: 16px 0 16px 0;
+  
+        border: none;
+  
+        i {
+          padding-left: 5px;
+          cursor: pointer;
+        }
+      }
+  
+      tr {
+        border: none;
+  
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 15px;
+        color: #2D0C57;
+        box-shadow: 0px 3px 6px rgba(45, 12, 87, 0.07);
+  
+        &:hover {
+          background: linear-gradient(252.78deg, #9775FA 0%, #5402BF 97.24%);
+          color: #fff;
+  
+          #id,
+          #doc,
+          #tipo,
+          #valor,
+          #pagamento {
+            color: #fff;
+          }
+        }
+  
+  
+  
+        #id {
+          line-height: 15px;
+          border-radius: 16px 0 0 16px;
+          font-weight: bold;
+          line-height: 15px;
+          color: #2D0C57;
+        }
+  
+        #doc {
+          font-weight: 500;
+          line-height: 15px;
+          color: #7203FF;
+        }
+  
+        #valor {
+          font-weight: bold;
+          line-height: 15px;
+          color: #2D0C57;
+        }
+  
+        #tipo {
+          font-weight: bold;
+          line-height: 15px;
+          color: #7203FF;
+        }
+  
+        #pagamento {
+          color: #7203FF;
+        }
+  
+        #status {
+          font-weight: 500;
+          line-height: 15px;
+          border-radius: 0 16px 16px 0;
+  
+          i {
+            padding-right: 8px;
+          }
+        }
+  
+  
+      }
+  
+      td {
+        padding: 25px 0 25px 0;
+        border: none;
+      }
+  
+  
+    }
+  }
+  
+  .orange {
+    color: #FE8101;
+  }
+  
+  .green {
+    color: #00CCA7;
+  }
+  
+  .yellow {
+    color: #DDB320;
+  }
+  
+  .blue {
+    color: #0084F4;
+  }
+  
+  .gray {
+    color: #7F8F9F;
+  }
+  
+  .red {
+    color: #FF647C;
+  }
+  
