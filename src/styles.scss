@@ -7,6 +7,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .my-pagination .ngx-pagination .current {
     background: #9775FA;
     border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    padding: 0;
+    span{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2px;
+    }
+   
+
   }
 .my-pagination .ngx-pagination :hover {
     border-radius: 50%;

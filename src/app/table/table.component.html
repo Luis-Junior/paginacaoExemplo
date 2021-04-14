@@ -11,7 +11,7 @@
             <th id="status">Pagto<i class="fas fa-chevron-down"></i></th>
             <th id="status">Status<i class="fas fa-chevron-down"></i></th>
     
-            <tr *ngFor="let pedido of pedidos | paginate: { itemsPerPage: 5, currentPage: paginaAtual }; let i = index">
+            <tr *ngFor="let pedido of pedidos | paginate: { itemsPerPage: 3, currentPage: paginaAtual,totalItems: res.count }; let i = index">
                 <td id="id">{{pedido.id}}</td>
                 <td id="data">{{pedido.data | date: "dd/MM/yyyy, HH:mm"}}h</td>
                 <td id="doc">{{pedido.produto}}</td>

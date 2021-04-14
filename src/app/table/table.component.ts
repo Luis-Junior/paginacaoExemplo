@@ -10,20 +10,17 @@ export class TableComponent implements OnInit {
 
   pedidos: Pedido[]=[]
   public paginaAtual = 1;
-  pageIndex:number = 0;
-    pageSize:number = 5;
-    lowValue:number = 0;
-    highValue:number = 5;
+
 
     res= {
-        "count": 14453,
-        "data": [
-          { /* item 1 */ },
-          { /* item 2 */ },
-          { /* item 3 */ },
-          { /*   ...  */ },
-          { /* item 10 */ }
-        ]
+        "count": this.pedidos.length,
+        // "data": [
+        //   { /* item 1 */ },
+        //   { /* item 2 */ },
+        //   { /* item 3 */ },
+        //   { /*   ...  */ },
+        //   { /* item 10 */ }
+        // ]
       }
 
   constructor() { }
@@ -342,16 +339,5 @@ export class TableComponent implements OnInit {
     ]
     
   }
-  getPaginatorData(event: any){
-    console.log(event);
-    if(event.pageIndex === this.pageIndex + 1){
-       this.lowValue = this.lowValue + this.pageSize;
-       this.highValue =  this.highValue + this.pageSize;
-      }
-   else if(event.pageIndex === this.pageIndex - 1){
-      this.lowValue = this.lowValue - this.pageSize;
-      this.highValue =  this.highValue - this.pageSize;
-     }   
-      this.pageIndex = event.pageIndex;
-}
+
 }
